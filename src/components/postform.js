@@ -45,6 +45,7 @@ class PostForm extends Component {
             </div>
             <br />
             <button type="submit">Submit</button>
+            <hr />
         </form>
 
       </div>
