@@ -5,9 +5,14 @@ export default class Header extends Component {
   render() {
     return (
       <Navbar fixedTop className={'navbar-left'}>
+      <Navbar.Header>
+        <Navbar.Brand>
+          Goad Users and Posts
+        </Navbar.Brand>
+      </Navbar.Header>
         <Nav>
-          <Button onClick={() => this.props.navigate("users")}>View Contributing Users</Button>
-          <Button onClick={() => this.props.navigate("posts")}>View Posts</Button>
+          <NavItem onClick={() => this.props.navigate("users")}>View Contributing Users</NavItem>
+          <NavItem onClick={() => this.props.navigate("posts")}>View Posts</NavItem>
         </Nav>
       </Navbar>
     )
