@@ -29,9 +29,11 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Header navigate={this.navigate}/>
-          {this.state.view === 'users' && <Users />}
-          {this.state.view === 'posts' && <PostForm />}
-          {this.state.view === 'posts' && <Posts />}
+          <div className={'main-container'}>
+            {this.state.view === 'users' && <Users />}
+            {this.state.view === 'posts' && <PostForm />}
+            {this.state.view === 'posts' && <Posts />}
+          </div>
         </div>
       </Provider>
     );
