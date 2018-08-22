@@ -7,6 +7,7 @@ import Header from './components/header';
 import { Provider } from 'react-redux';
 import store from './store';
 
+
 class App extends Component {
 
   constructor(props){

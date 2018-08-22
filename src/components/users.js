@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchUsers } from '../actions/postActions';
+import { Table} from 'react-bootstrap';
+import '../App.css';
 
 
 class Users extends Component {
@@ -20,8 +22,9 @@ class Users extends Component {
         ));
         
         return (
-            <div>
-                <table>
+            <div className={'users-container'}>
+                <h3>Contributing Users:</h3>
+                <Table hover striped className={'users-table'}>
                     <thead>
                         <tr>
                             <td><h3>Name</h3></td><td><h3>Email Address</h3></td>
@@ -30,7 +33,7 @@ class Users extends Component {
                     <tbody>
                     {users}
                     </tbody>
-                </table>
+                </Table>
             </div>
         )
   }

@@ -15,4 +15,8 @@ body {
 
 .container{
   float: left;
+  background-color: #FFDEC0;
+  width: 100%;
 }
+
+
