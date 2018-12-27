@@ -12,7 +12,6 @@ class Users extends Component {
         this.props.fetchUsers();
     }
 
-
     render() {
 
         const users = this.props.users.map(user => (
@@ -45,7 +44,7 @@ Users.propTypes = {
 }
 
 const mapStateToProps = state =>({
-    users: state.posts.users
+    users: state.users.users
 })
 
 export default connect(mapStateToProps, { fetchUsers })(Users);
