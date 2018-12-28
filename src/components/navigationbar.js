@@ -14,6 +14,7 @@ export default class NavigationBar extends Component {
           <Nav>
             <NavItem onClick={() => this.props.navigate("users")}>View Contributing Users</NavItem>
             <NavItem onClick={() => this.props.navigate("posts")}>View Posts</NavItem>
+            <NavItem onClick={()=> this.props.navigate("about")}>About This Site</NavItem>
           </Nav>
         </Navbar>
     )

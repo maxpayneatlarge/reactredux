@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import {Header} from './components/header';
 import UserPosts from './components/userposts';
+import About from './components/about';
 
 
 class App extends Component {
@@ -26,6 +27,8 @@ class App extends Component {
       this.setState({view: "posts"});
     } else if(selectedView === 'userPosts'){
       this.setState({view: 'userPosts'});
+    } else if(selectedView === 'about'){
+      this.setState({view: 'about'});
     }
   }
 
@@ -40,6 +43,7 @@ class App extends Component {
             {this.state.view === 'posts' && <PostForm />}
             {this.state.view === 'posts' && <Posts />}
             {this.state.view === 'userPosts' && <UserPosts navigate = {this.navigate}/>}
+            {this.state.view === 'about' && <About />}
           </div>
         </div>
       </Provider>
