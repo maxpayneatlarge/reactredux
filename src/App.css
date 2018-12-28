@@ -16,3 +16,7 @@ html, body{
 .users-table {
   background-color: white;
 }
+
+.link {
+  cursor: pointer;
+}

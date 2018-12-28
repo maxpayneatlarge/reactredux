@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchUsers } from '../actions/postActions';
+import { setSelectedUser } from '../actions/postActions';
 import { Table} from 'react-bootstrap';
 import '../App.css';
 
@@ -12,11 +13,16 @@ class Users extends Component {
         this.props.fetchUsers();
     }
 
-    render() {
+    handleClick = (user) => {
+        //alert(JSON.stringify(user));
+        this.props.setSelectedUser(user);
+        this.props.navigate("userPosts");
+    }
 
+    render() {
         const users = this.props.users.map(user => (
             <tr key={user.id}>
-                <td>{user.name}</td><td>{user.email}</td>
+                <td><a onClick={() => this.handleClick(user)} className="link">{user.name}</a></td><td>{user.email}</td>
             </tr>
         ));
         
@@ -47,4 +53,4 @@ const mapStateToProps = state =>({
     users: state.users.users
 })
 
-export default connect(mapStateToProps, { fetchUsers })(Users);
+export default connect(mapStateToProps, { fetchUsers, setSelectedUser } )(Users);
