@@ -14,7 +14,6 @@ class Users extends Component {
     }
 
     handleClick = (user) => {
-        //alert(JSON.stringify(user));
         this.props.setSelectedUser(user);
         this.props.navigate("userPosts");
     }
