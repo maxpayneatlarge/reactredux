@@ -24,7 +24,7 @@ class UserPosts extends Component{
         return(
             <div>
                 <h2> { this.props.user.name }'s Posts </h2>
-                <h4><a onClick = {() => this.handleClick()} className="link">(Go back to users)</a></h4>
+                <h4><a href='/#' onClick={() => this.handleClick()} className="link">(Go back to users)</a></h4>
                 <hr />
                 { postItems }
             </div>

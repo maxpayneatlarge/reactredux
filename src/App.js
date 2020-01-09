@@ -6,7 +6,7 @@ import Users from './components/users';
 import NavigationBar from './components/navigationbar';
 import { Provider } from 'react-redux';
 import store from './store';
-import {Header} from './components/header';
+import Header from './components/header';
 import UserPosts from './components/userposts';
 import About from './components/about';
 

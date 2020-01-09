@@ -14,6 +14,7 @@ class Users extends Component {
     }
 
     handleClick = (user) => {
+        console.log("userClicked");
         this.props.setSelectedUser(user);
         this.props.navigate("userPosts");
     }
@@ -21,7 +22,7 @@ class Users extends Component {
     render() {
         const users = this.props.users.map(user => (
             <tr key={user.id}>
-                <td><a onClick={() => this.handleClick(user)} className="link">{user.name}</a></td><td>{user.email}</td>
+                <td><a href='/#' onClick={() => this.handleClick(user)} className="link">{user.name}</a></td><td>{user.email}</td>
             </tr>
         ));
         
